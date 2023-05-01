@@ -18,6 +18,7 @@ public boolean isFull(){
     public int size(){
     return top+1;
     }
+
     public int peek()
     {
         if (!isEmpty()) {
