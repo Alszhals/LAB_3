@@ -46,4 +46,13 @@ public class MyArrayListQueue {
         arr[rear] = item;
         count++;
     }
+    public int peek()
+    {
+        if (isEmpty())
+        {
+            System.out.println("Underflow\nProgram Terminated");
+            System.exit(-1);
+        }
+        return arr[front];
+    }
 }
