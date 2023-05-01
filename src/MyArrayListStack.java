@@ -15,6 +15,17 @@ public boolean isFull(){
     public boolean isEmpty() {
         return top == -1;
     }
+    public int peek()
+    {
+        if (!isEmpty()) {
+            return arr[top];
+        }
+        else {
+            System.exit(-1);
+        }
+
+        return -1;
+    }
 public void push(int x){
     if (isFull()){
         System.out.println("Overflow\nProgram Terminated\n");
@@ -23,5 +34,19 @@ public void push(int x){
 
     System.out.println("Inserting " + x);
     arr[++top] = x;
+    }
+    public int pop()
+    {
+        // check for stack underflow
+        if (isEmpty())
+        {
+            System.out.println("Underflow\nProgram Terminated");
+            System.exit(-1);
+        }
+
+        System.out.println("Removing " + peek());
+
+        // decrease stack size by 1 and (optionally) return the popped element
+        return arr[top--];
     }
 }
